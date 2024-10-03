@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 header {
   position: fixed;
   width: 100%;
@@ -13,61 +17,59 @@ header .inner {
   align-items: center;
   font-size: 18px;
 }
-header .inner #menu li {
-  display: inline-block;
-  margin-left: 116px;
-}
-header .inner #menu li a {
-  text-decoration: none;
+header .inner a {
   color: #000;
   font-weight: bold;
 }
-header .inner #menu li li:first-child {
-  margin-left: 0;
+header .inner #menu li {
+  display: inline-block;
+  margin: 0 58px;
 }
 header .inner #util {
   position: relative;
+  width: 223px;
+  text-align: right;
+}
+header .inner #util ul {
+  display: inline-block;
 }
 header .inner #util li {
   display: inline-block;
-  margin-left: 52px;
-}
-header .inner #util li a {
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
 }
 header .inner #util li .sub {
   display: none;
-}
-header .inner #util li .sub:hover {
-  display: block;
   color: #fff;
+  position: absolute;
 }
-header .inner #util .buger::after {
-  content: "";
+header .inner #util li:hover .sub {
+  display: block;
+}
+header .inner #util .buger {
+  margin-left: 52px;
+}
+header .inner #util .buger a {
   display: block;
   width: 28px;
   height: 28px;
   background: #000;
-  border-radius: 50px;
-  position: absolute;
-  top: -4px;
-  right: -5px;
-  z-index: -1;
-}
-header .inner #util li:first-child {
-  margin-left: 0;
+  border-radius: 50%;
+  line-height: 28px;
+  text-align: center;
 }
 header .inner #util .xi-bars {
   color: #fff;
 }
 
+main {
+  padding-top: 110px;
+}
+
 #main_view {
-  height: 100vh;
+  position: relative;
+  height: calc(100vh - 110px);
+  overflow: hidden;
 }
 #main_view #main_text {
-  width: 100%;
   letter-spacing: -6px;
   font-weight: bold;
   font-size: 200px;
@@ -75,9 +77,11 @@ header .inner #util .xi-bars {
   white-space: nowrap;
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
 }
 #main_view #main_image {
   position: absolute;
-  bottom: 123px;
-  left: 337px;
-}
+  top: 50%;
+  left: 17.5%;
+  transform: translateY(-50%);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,83 @@
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 200;
+  background: #fff;
+  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
+}
+header .inner {
+  display: flex;
+  height: 110px;
+  justify-content: space-between;
+  margin: 0 7.3%;
+  align-items: center;
+  font-size: 18px;
+}
+header .inner #menu li {
+  display: inline-block;
+  margin-left: 116px;
+}
+header .inner #menu li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+header .inner #menu li li:first-child {
+  margin-left: 0;
+}
+header .inner #util {
+  position: relative;
+}
+header .inner #util li {
+  display: inline-block;
+  margin-left: 52px;
+}
+header .inner #util li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+header .inner #util li .sub {
+  display: none;
+}
+header .inner #util li .sub:hover {
+  display: block;
+  color: #fff;
+}
+header .inner #util .buger::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 28px;
+  background: #000;
+  border-radius: 50px;
+  position: absolute;
+  top: -4px;
+  right: -5px;
+  z-index: -1;
+}
+header .inner #util li:first-child {
+  margin-left: 0;
+}
+header .inner #util .xi-bars {
+  color: #fff;
+}
+
+#main_view {
+  height: 100vh;
+}
+#main_view #main_text {
+  width: 100%;
+  letter-spacing: -6px;
+  font-weight: bold;
+  font-size: 200px;
+  color: #008239;
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+}
+#main_view #main_image {
+  position: absolute;
+  bottom: 123px;
+  left: 337px;
+}

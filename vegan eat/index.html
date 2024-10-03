@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <!--외부 링크연결-->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!--외부 링크연결 -->
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <!--font 스타일 연결-->
     <link rel="stylesheet" href="">
     <!--swiper 연결-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!--script 연결-->
     <script src="js/script.js"></script>
 </head>
@@ -21,7 +23,7 @@
     <header>
         <div class="inner">
             <div id="logo">
-                <p><a href=""></a><img src="images/logo.png" alt="비건잇로고"></a></p>
+                <h1><a href=""></a><img src="images/logo.png" alt="비건잇로고"></a></h1>
             </div><!--end logo-->
             <div id="menu">
                 <ul>
@@ -33,11 +35,10 @@
             </div><!--END GNB-->
             <div id="util">
                     <ul>
-                        <li><a href="#">KR</a><i class="xi-caret-down-min"></i>
-                        <div class="sub"><a href="#">EN</a></div>
+                        <li><a href="#">KR<i class="xi-caret-down-min"></i></a><!--[추가] 닫는 a태그 수정-->
+                            <div class="sub"><a href="#">EN</a></div>
                         </li>
                         <li class="buger"><a href="#"><i class="xi-bars"></i></a></li>
-
                     </ul>
             </div><!--end util-->
         </div><!--end inner-->

@@ -1,0 +1,159 @@
+a {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 200;
+  background: #fff;
+  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
+}
+header .inner {
+  display: flex;
+  height: 110px;
+  justify-content: space-between;
+  margin: 0 7.3%;
+  align-items: center;
+  font-size: 18px;
+}
+header .inner a {
+  color: #000;
+  font-weight: bold;
+}
+header .inner #menu li {
+  display: inline-block;
+  margin: 0 58px;
+}
+header .inner #util {
+  font-size: 20px;
+  position: relative;
+  width: 223px;
+  text-align: right;
+}
+header .inner #util ul {
+  display: inline-block;
+}
+header .inner #util li {
+  display: inline-block;
+}
+header .inner #util li .sub {
+  display: none;
+  color: #fff;
+  position: absolute;
+  transition: all 0.4s;
+}
+header .inner #util li:hover .sub {
+  display: block;
+  width: 35px;
+  height: 50px;
+  border-radius: 0 0 20px 20px;
+  background: #fff;
+  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.2);
+  line-height: 50px;
+  text-align: center;
+}
+header .inner #util .buger {
+  margin-left: 52px;
+}
+header .inner #util .buger a {
+  display: block;
+  width: 28px;
+  height: 28px;
+  background: #000;
+  border-radius: 50%;
+  line-height: 28px;
+  text-align: center;
+}
+header .inner #util .xi-bars {
+  color: #fff;
+}
+
+@keyframes main_text {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes s1 {
+  to {
+    top: -20px;
+  }
+}
+main {
+  padding-top: 110px;
+}
+
+#main_view {
+  position: relative;
+  height: calc(100vh - 110px);
+  overflow: hidden;
+}
+#main_view #main_text {
+  animation: main_text 100s linear infinite;
+  letter-spacing: -6px;
+  font-weight: bold;
+  font-size: 200px;
+  color: #008239;
+  white-space: nowrap;
+  opacity: 0.6;
+  position: absolute;
+  top: 50%;
+  line-height: 1;
+  margin-top: -0.5em;
+}
+#main_view #main_image {
+  position: absolute;
+  top: 50%;
+  left: 17.5%;
+  transform: translateY(-50%);
+}
+#main_view #main_image li img {
+  width: 725px;
+  height: 625;
+}
+#main_view #slogan {
+  position: absolute;
+  bottom: 50px;
+  right: 140px;
+}
+#main_view #slogan li {
+  border: 1px solid #008239;
+  background: #fff;
+  width: 150px;
+  height: 45px;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 43px;
+  display: inline-block;
+  margin-left: -20px;
+  position: relative;
+  top: 0;
+}
+#main_view #slogan li:last-child {
+  background: #008239;
+}
+#main_view #slogan li:last-child a {
+  color: #fff;
+}
+#main_view #slogan .s1 {
+  transform: rotate(-10deg);
+  animation: s1 0.4s infinite 0.2s alternate;
+}
+#main_view #slogan .s2 {
+  transform: rotate(0deg);
+  animation: s1 0.4s infinite 0.3s alternate;
+}
+#main_view #slogan .s3 {
+  transform: rotate(10deg);
+  animation: s1 0.4s infinite 0.4s alternate;
+}
+#main_view #slogan .s4 {
+  transform: rotate(0deg);
+  animation: s1 0.4s infinite 0.5s alternate;
+}
+#main_view #slogan a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #008239;
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */

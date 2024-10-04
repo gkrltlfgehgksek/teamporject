@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+$main:#008239;
+a{text-decoration:none;}
+
+
+header{position:fixed; width:100%; z-index:200;background: #fff;
+    box-shadow:0px 5px 6px rgb(0,0,0,0.2);
+    .inner{display:flex; height:110px; justify-content:space-between; margin:0 7.3%;
+        align-items:center; font-size:18px; 
+        a{color:#000; font-weight:bold;}        
+        #menu{
+            li{
+                display: inline-block; margin:0 58px; 
+            
+            }//end li  
+        }//end menu
+        #util{font-size: 20px;
+            position:relative; width:223px; text-align:right;
+            ul{display:inline-block;}
+            li{ 
+                display: inline-block; 
+                .sub{display:none; color: #fff;
+                    position:absolute; transition: all 0.4s;}
+                &:hover .sub{display: block; width: 35px; height:50px; border-radius:0 0 20px 20px;
+                     background:#fff;  box-shadow:0px 5px 6px rgb(0,0,0,0.2);
+                    line-height:50px; text-align: center;} 
+            }//end li
+            .buger{margin-left: 52px;}
+            .buger a{display:block; width:28px; height:28px;
+                background:#000; border-radius:50%; line-height:28px;
+                text-align:center;}
+            .xi-bars{color:#fff;}
+        }//end util
+    }//end inner 
+}//end header
+
+@keyframes main_text{to{transform: translateX(-50%);}}
+@keyframes s1  {
+    to{top:-20px;}
+}
+main{padding-top:110px;}
+#main_view{
+    position:relative; height:calc(100vh - 110px);
+    overflow:hidden;
+    #main_text{ animation: main_text 100s linear infinite;
+        letter-spacing: -6px; font-weight:bold; font-size:200px; color: $main;
+        white-space: nowrap; opacity: 0.6;
+        position:absolute; top:50%; line-height:1; margin-top: -0.5em;
+       
+    }//end main_text
+    #main_image{
+        position: absolute; top:50%; left:17.5%; transform:translateY(-50%);
+        li{
+            img{width:725px; height:625;}
+        }
+    }//end main_image
+    #slogan{
+        position:absolute; bottom:50px; right:140px;
+        li{border:1px solid $main; background:#fff; width: 150px; height:45px; border-radius:25px;
+           text-align: center; line-height: 43px; display: inline-block;
+          margin-left:-20px; position: relative; top:0;}   
+        li:last-child {background: $main;}
+        li:last-child a{color:#fff;}
+        .s1{transform:rotate(-10deg); animation: s1 0.4s infinite 0.2s alternate; }
+        .s2{transform:rotate(0deg); animation: s1 0.4s infinite 0.3s alternate;}
+        .s3{transform:rotate(10deg); animation: s1 0.4s infinite 0.4s alternate;}
+        .s4{transform:rotate(0deg); animation: s1 0.4s infinite 0.5s alternate;}
+        a{font-size: 24px; text-decoration: none; color:#008239; font-weight:bold;}
+    }
+}//end main_view
+
+

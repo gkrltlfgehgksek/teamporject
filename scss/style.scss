@@ -52,9 +52,13 @@ main{padding-top:110px;}
        
     }//end main_text
     #main_image{
-        position: absolute; top:50%; left:17.5%; transform:translateY(-50%);
-        li{
-            img{width:725px; height:625;}
+        position: absolute; top:50%; left:calc(17.5% - 100px); transform:translateY(-50%); 
+        padding:0 100px; width:calc(70% - 100px); 
+        .swiper-slide{
+            img{height:625px;}
+            &.swiper-slide-next img{opacity:0; transform:translateX(200px); transition:all 0s;}
+            &.swiper-slide-prev img{opacity:0; transform:translateX(-90px); transition:all .4s;}
+            &.swiper-slide-active img{opacity:1; transform:translateX(0px); transition:all .4s;}
         }
     }//end main_image
     #slogan{
@@ -72,9 +76,14 @@ main{padding-top:110px;}
     }
 }//end main_view
 
-#brand_story{ position: relative;
-        max-width:1640px; width: 85.4%; height:3000px;
-        margin: 0 auto;
+#brand_story{ position: relative;        
+    .inner{max-width:1640px; width: 85.4%; margin: 0 auto;}
+    .bg_line_box{
+        position:absolute; width:100%; height:100%; z-index:-1; overflow:hidden;
+        .bg_line{width:2000px; position:absolute; 
+            left:50%; top:0; transform:translateX(-50%);}
+        .bg_line path{   }
+    }
     .brand_bg{
         width:714px; height:649px;
         position:absolute; top:-150px; right:100px;

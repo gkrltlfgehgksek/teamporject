@@ -1,0 +1,288 @@
+
+
+@charset "utf-8";
+
+body{
+    font-family:"Pretendard";
+}
+
+
+//공통색상 : #008239
+
+.clearfix::after{content:""; display:block; clear:both;}
+
+a{text-decoration:none;}
+
+#product{margin-bottom:15%;  position: relative; 
+    width:100%; height:1100px; background:#69B78E;
+    .inner{margin:0 auto; //outline:2px solid black;
+         height:100%; width:1364px;
+        .product_title{text-align:center; font-family:"Pretendard";
+            font-weight:900;  //outline:2px solid red;
+        h1{color:#fff; font-size:50px; padding-top:5%;}
+       
+        }//end:product_title
+       .move{
+        .product_box{width:100%; height:auto;  //outline:2px solid salmon;
+
+            span{font-size:320px; color:#e1f0b9;  position:absolute;
+                top:11%; left:23%; z-index:20; opacity:0.5; font-weight:900;
+            }
+
+            display:flex; margin-top:33%; 
+            p img{width:589px; height:418px; transform:rotate(15deg);
+                position:absolute; top:29%; left:35%;
+                z-index:21;
+            }
+            p::after{content:""; display:block; width:550px; height:38px;
+                background:#5FA57F; border-radius:85%; 
+                position:absolute; bottom:18%; left:50%; margin-left:-290px;
+                filter: blur(10px);
+            }
+        }//end:product_box
+
+        .product_bg{
+           
+        .tomato{width:242px; height:161px; z-index:10; opacity:0.7;
+        }
+
+        .f{top:20%; left:13%; position:absolute; //outline:1px solid dodgerblue;
+            transform:rotate(-4deg);
+        }
+        .s{top:30%; right:17%; position:absolute; //outline:1px solid purple;
+            transform:rotate(15deg); z-index:21;
+        }
+        .t{top:20%; right:11%; position:absolute; //outline:1px solid orange;
+          
+        }
+
+        .pasta{width:287px; height:285px;  position:absolute; bottom:43%; left:25%; z-index:20;}
+
+         }//end:product_bg
+
+
+         //제품 소개
+         .product_sogae{//outline:1px solid red; 
+            float:left; color:#FDF9DE; margin-top:7%;
+            p{font-size:40px; font-weight:bold; line-height:1.2;
+                em{font-weight:normal;}
+            }
+         }//end:.product_sogae
+
+         .news_btn{
+            margin-top:29%; font-family:"Pretendard"; text-align: center;
+            span{font-size:25px; color:#FDF9DE;}
+            
+            p{font-size:12px; width:30px; height:30px; background:#FDF9DE;
+                border-radius:50%; color:#69B78E; text-align:center; line-height:30px;
+                margin-left:10px; box-sizing:border-box; font-weight:bold;
+            }
+        }//end:news)btn
+
+
+        //성분표기
+        .info{float:right; color:#fff; 
+            margin-top:-350px;
+            li{padding:3% 0; border-bottom:1px solid white;
+                
+                a{color:white; margin-left:0%; display:inline-block;
+                    float:right; margin-left:20px;
+                }
+                a:hover{color:#008239;}
+                
+            }
+            
+        }//end:info
+    }//end:move
+    
+
+    }//end:inner
+}//end:product
+
+#news{width:100%; height:800px; margin-bottom:20%;// outline:3px solid red;
+        margin-top:200px;
+    .inner{//outline:2px solid darkcyan;
+        width:1364px; margin:0 auto; 
+        .news_title{margin-bottom:20px;}
+    h1{font-size:100px; font-weight:600; font-family:"Pretendard";
+    color:#008239; float:left;}
+    .news_btn{font-weight:600;
+        float:right; margin-top:50px; font-family:"Pretendard";
+        span{font-size:30px; color:#000;}
+        
+        p{font-size:20px; width:45px; height:45px; background:#008239;
+            border-radius:50%; color:#fff; text-align:center; line-height:45px;
+            margin-left:10px; box-sizing:border-box;
+        }
+    }
+
+    .news_box{//outline:2px solid palevioletred;
+
+        
+        li{ float:left;  position: relative; border-radius:20px;          
+            img{border-radius:20px; transition: all 0.2s ease-in-out;}
+            
+        }
+        li:hover img{transform:scale(1.05);}
+
+        li:after{cursor: pointer;
+            content:""; width:100%; height:268px;
+            position:absolute; bottom:0; left:0; border-radius:0 0 20px 20px;
+            opacity:0.9;
+            background:linear-gradient(
+                rgba(255, 255, 255, 0) 0%,
+                rgba(0, 0, 0, 1) 92%,
+                rgba(2, 0, 36, 1) 90%
+            );
+        }
+        
+        //공지사항만 그라없애기
+        .notice::after{display:none;}
+
+        //홍보자료, 보도자료 등
+        span{position:absolute; top:3%; left:5%; color:#fff; z-index:8;
+        width:124px; height:47px; background:rgba(0, 0, 0, 0.5); border-radius:50px;
+        font-size:18px; text-align:center; line-height:47px; box-sizing:border-box;
+        font-family:"Noto Sans KR"; font-weight:500;}
+
+
+        //기사제목, 내용
+        dl{
+            position:absolute; z-index:90;
+            bottom:6%; left:5%;
+            dt{color:#fff; font-size:20px; font-weight:bold;
+                font-family:"Noto Sans KR"; width:340px;
+                white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+            dd{color:#979797; font-size:15px; font-family:"Noto Sans KR";
+                margin-top:3%; line-height:1.3; font-weight:500;
+                width:350px;
+                white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+            }
+        }
+
+        //효리박스
+        .hyoree_box{margin-right:16px; position: relative;
+        overflow:hidden;  height:720px;
+            img{transition: all 0.2s ease-in-out;}
+
+            span{width:150px;}
+
+            dt{font-size:25px; width:100%;}
+            dd{font-size:17px; width:100%;}
+        }
+        /*.hyoree_box::after{content:""; width:100%; height:268px;
+            position:absolute; bottom:0; left:0; border-radius:0 0 20px 20px;
+            opacity:0.9;
+            background:linear-gradient(
+                rgba(255, 255, 255, 0) 0%,
+                rgba(0, 0, 0, 1) 92%,
+                rgba(2, 0, 36, 1) 90%
+            );
+        }*/
+        .hyoree_box:hover img{transform:scale(1.05);}
+
+
+        //효리박스 제외
+        .second_box, .notice, .last_box, .ok_box{
+            overflow:hidden; 
+        }
+        
+
+
+        //2번째, 공지사항 박스
+        .second_box,
+        .notice{margin-bottom:20px;}
+
+        //공지사항, 마지막 박스
+        .notice,
+        .last_box{margin-left:16px;}
+        
+       
+    }//end:news_box
+
+
+    
+    }//end:inner
+}//end:news
+
+
+
+
+
+
+
+
+
+
+.top{position:fixed; right:5%; bottom:20%; 
+    z-index:999; background:white; width:60px; height:60px; border-radius:50%;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.1); line-height:60px;
+    transition: all .2s ease-in-out;
+
+    .top_btn{text-align:center; font-size:1em; line-height:1.5;
+    margin-top:5px;
+    
+    a{text-decoration:none; color:black;}
+    }
+}//end:top
+
+
+
+
+#mobile{position: relative;
+    width:100%; height:463px;
+    background:url(../image/mobile_bg01.jpg) center 50% no-repeat; background-size:cover;
+    border-radius:150px 150px 0 0; 
+    .img{background:url(../image/mobile_img.png) no-repeat;
+        width:300px; height:561px; position:absolute; bottom:10%; left:20%;
+        transform:rotate(-8deg);      
+    }
+    .inner{width:1364px; margin:0 auto; 
+    h1{color:white; font-size:30px; float:right; 
+        font-weight:bold; font-family:"Noto Sans KR"; margin-top:96px;
+    }
+    p{color:white; font-size:23px; clear:both; line-height:1.5; float:right;
+        margin-right:17.5%; margin-top:4%; font-family:"Noto Sans KR";}
+    }
+    .app_box{clear:both; float:right; margin-right:37%; margin-top:3%;}
+    li{display:inline-block;}
+}//end:mobile
+
+
+footer{
+        width:100%; height:400px; background:#008239;
+        .inner{margin:0 auto; //outline:2px solid sandybrown;
+            width:1364px; height:400px; 
+            h1{
+                padding-top:60px; 
+                img{width:274px; height:58px;}
+            }
+            hr{margin-left:-10%; border:1px solid white; width:120%;
+                opacity:0.5; margin-top:2%;
+            }
+            #footer_info{ float:left; margin-top:50px;
+                width:536px; height:auto; //outline:1px solid salmon;
+                li{color:white; padding-bottom:30px; font-size:17px;}
+                li:last-child{color:#CECECE;}
+            }//end:footer_info
+
+            #footer_gnb{
+                float:right; margin-top:50px;
+                li{display:inline-block; margin:0 15px;}
+                li a{color:white; text-decoration:none;}
+                li:first-child{font-weight:bold;}
+            
+                .footer_sns{ margin-top:70px;
+                    float:right; 
+                    li{float:left; 
+                    img{width:60px;}
+                    }
+                }
+
+
+            }//end:footer_gnb
+
+
+        }//end:inner
+        
+}//end:footer

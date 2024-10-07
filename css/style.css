@@ -1,7 +1,15 @@
+@charset "UTF-8";
 a {
   text-decoration: none;
 }
 
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*상단스타일*/
 header {
   position: fixed;
   width: 100%;
@@ -79,6 +87,7 @@ header .inner #util .xi-bars {
     top: -20px;
   }
 }
+/*메인영역 스타일*/
 main {
   padding-top: 110px;
 }
@@ -156,4 +165,73 @@ main {
   text-decoration: none;
   color: #008239;
   font-weight: bold;
+}
+
+#brand_story {
+  position: relative;
+  max-width: 1640px;
+  width: 85.4%;
+  height: 3000px;
+  margin: 0 auto;
+}
+#brand_story .brand_bg {
+  width: 714px;
+  height: 649px;
+  position: absolute;
+  top: -150px;
+  right: 100px;
+  background: url("../image/bs_backimg.png") no-repeat;
+}
+#brand_story h3 {
+  font-size: 5.2vw;
+  font-family: Pretendard-Bold;
+  color: #008239;
+  margin-left: 8.3%;
+  margin-top: 13%;
+  margin-bottom: 13%;
+}
+#brand_story #b_start {
+  margin: 0 8.3%;
+}
+#brand_story #b_start li:nth-child(odd) .img {
+  float: left;
+}
+#brand_story #b_start li:nth-child(odd) .text {
+  padding-left: 42%;
+}
+#brand_story #b_start li:nth-child(even) .img {
+  float: right;
+}
+#brand_story #b_start li:nth-child(even) .text {
+  padding-right: 42%;
+}
+#brand_story #b_start .item .img {
+  width: 41.9%;
+}
+#brand_story #b_start .item .img img {
+  width: 100%;
+}
+#brand_story #b_start .item .text {
+  padding-top: 13.5%;
+}
+#brand_story #b_start .item .bt {
+  background: #008239;
+  border-radius: 20px;
+  width: 160px;
+  height: 40px;
+  text-align: center;
+  line-height: 39px;
+  font-size: 25px;
+  font-family: Pretendard-Bold;
+  color: #fff;
+}
+#brand_story #b_start .item h2 {
+  font-size: 38px;
+  font-family: Pretendard-Bold;
+  margin: 27px 0 47px;
+}
+#brand_story #b_start .item p {
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 40px;
 }/*# sourceMappingURL=style.css.map */

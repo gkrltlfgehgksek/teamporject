@@ -2,8 +2,9 @@
 
 $main:#008239;
 a{text-decoration:none;}
+.clearfix::after{content: ''; display: block; clear: both;}
 
-
+/*상단스타일*/
 header{position:fixed; width:100%; z-index:200;background: #fff;
     box-shadow:0px 5px 6px rgb(0,0,0,0.2);
     .inner{display:flex; height:110px; justify-content:space-between; margin:0 7.3%;
@@ -39,6 +40,7 @@ header{position:fixed; width:100%; z-index:200;background: #fff;
 @keyframes s1  {
     to{top:-20px;}
 }
+/*메인영역 스타일*/
 main{padding-top:110px;}
 #main_view{
     position:relative; height:calc(100vh - 110px);
@@ -69,5 +71,40 @@ main{padding-top:110px;}
         a{font-size: 24px; text-decoration: none; color:#008239; font-weight:bold;}
     }
 }//end main_view
+
+#brand_story{ position: relative;
+        max-width:1640px; width: 85.4%; height:3000px;
+        margin: 0 auto;
+    .brand_bg{
+        width:714px; height:649px;
+        position:absolute; top:-150px; right:100px;
+        background:url('../image/bs_backimg.png') no-repeat;
+    }
+    h3{font-size: 5.2vw; font-family:Pretendard-Bold; color: $main; margin-left:8.3%;
+        margin-top: 13%; margin-bottom: 13%;
+       }
+    #b_start{margin:0 8.3%;
+        li:nth-child(odd){
+            .img {float: left;}
+            .text{ padding-left: 42%;}
+        }
+        li:nth-child(even){
+            .img {float: right;}
+            .text{ padding-right: 42%;}
+        }
+        .item{
+            .img{width: 41.9%;}
+            .img img{width:100%;}
+            .text{padding-top:13.5%;}
+            .bt{background: #008239; border-radius:20px; width:160px; height:40px;
+                text-align: center; line-height:39px; 
+                font-size:25px; font-family:Pretendard-Bold; color:#fff;}
+            h2{font-size:38px; font-family:Pretendard-Bold; margin: 27px 0 47px;}
+            p{font-size:25px; font-weight: 300; line-height:40px;}
+        }//end text
+    }//end b_text
+}//end brand_story
+
+
 
 

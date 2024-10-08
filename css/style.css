@@ -190,6 +190,8 @@ main {
   max-width: 1640px;
   width: 85.4%;
   margin: 0 auto;
+  padding-top: 10%;
+  padding-bottom: 5%;
 }
 #brand_story .bg_line_box {
   position: absolute;
@@ -199,18 +201,16 @@ main {
   overflow: hidden;
 }
 #brand_story .bg_line_box .bg_line {
-  width: 87%;
+  width: 100%;
   position: absolute;
   aspect-ratio: 2/4;
-  left: 50%;
-  top: -10%;
-  transform: translateX(-50%);
+  left: -5%;
 }
 #brand_story .brand_bg {
   width: 714px;
   height: 649px;
   position: absolute;
-  top: -150px;
+  top: 0px;
   right: 100px;
   background: url("../image/bs_backimg.png") no-repeat;
 }
@@ -219,11 +219,13 @@ main {
   font-family: Pretendard-Bold;
   color: #008239;
   margin-left: 8.3%;
-  margin-top: 13%;
   margin-bottom: 13%;
 }
 #brand_story #b_start {
   margin: 0 8.3%;
+}
+#brand_story #b_start li {
+  margin-bottom: 150px;
 }
 #brand_story #b_start li:nth-child(odd) .img {
   float: left;

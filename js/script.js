@@ -6,7 +6,22 @@ window.addEventListener("load",function(){
         loop: true,
     });
 
-
+    const product_slider = new Swiper('#product_slider', {
+        // Optional parameters
+        loop: true,
+        pagination: {
+            el: '.pager',
+            type: "fraction",
+        },
+        autoplay: {
+            delay: 5000,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        
+    });
 
 
 });//end:window.addEventListener(...

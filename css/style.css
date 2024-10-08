@@ -199,10 +199,11 @@ main {
   overflow: hidden;
 }
 #brand_story .bg_line_box .bg_line {
-  width: 2000px;
+  width: 87%;
   position: absolute;
+  aspect-ratio: 2/4;
   left: 50%;
-  top: 0;
+  top: -10%;
   transform: translateX(-50%);
 }
 #brand_story .brand_bg {
@@ -265,4 +266,4 @@ main {
   font-size: 25px;
   font-weight: 300;
   line-height: 40px;
-}/*# sourceMappingURL=style.css.map */
+}

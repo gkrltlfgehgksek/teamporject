@@ -77,22 +77,24 @@ main{padding-top:110px;}
 }//end main_view
 
 #brand_story{ position: relative;        
-    .inner{max-width:1640px; width: 85.4%; margin: 0 auto;}
+    .inner{max-width:1640px; width: 85.4%; margin: 0 auto; padding-top:10%; padding-bottom:5%;}
     .bg_line_box{
         position:absolute; width:100%; height:100%; z-index:-1; overflow:hidden; 
-        .bg_line{width:87%; position:absolute; aspect-ratio: 2 / 4;
-            left:50%; top:-10%; transform:translateX(-50%);}
+        .bg_line{width:100%; position:absolute; aspect-ratio: 2 / 4;
+            left:-5%;}
         .bg_line path{   }
     }
     .brand_bg{
         width:714px; height:649px;
-        position:absolute; top:-150px; right:100px;
+        position:absolute; top:0px; right:100px;
         background:url('../image/bs_backimg.png') no-repeat;
     }
     h3{font-size: 5.2vw; font-family:Pretendard-Bold; color: $main; margin-left:8.3%;
-        margin-top: 13%; margin-bottom: 13%;
+         margin-bottom: 13%;
        }
-    #b_start{margin:0 8.3%;
+    #b_start{
+        margin:0 8.3%;
+        li{margin-bottom:150px;}
         li:nth-child(odd){
             .img {float: left;}
             .text{ padding-left: 42%;}

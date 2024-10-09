@@ -12,15 +12,10 @@
     <!--css  연결-->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style 01.css">
 
     <!--swiper 연결-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
     <script src="js/SmoothScroll.js"></script>
     <!--script 연결-->
@@ -30,20 +25,50 @@
     <header>
         <div class="inner">
             <div id="logo">
-                <h1><a href=""></a><img src="image/logo.png" alt="비건잇로고"></a></h1>
+                <h1><a href="https://gkrltlfgehgksek.github.io/teamporject/"><img src="image/logo.png" alt="비건잇로고"></a></h1>
             </div><!--end logo-->
             <div id="menu">
                 <ul>
-                    <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">PRODUCT</a></li>
-                    <li><a href="#">CUMMUNITY</a></li>
-                    <li><a href="#">SUPPORT</a></li>
+                    <li class="m_t"><a href="#">ABOUT US</a>
+                        <div class="sub">
+                            <ul>
+                                <li><a href="#">비건잇 소개</a></li>
+                                <li><a href="#">브랜드 스토리</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="m_t"><a href="#">PRODUCT</a>
+                        <div class="sub">
+                            <ul>
+                                <li><a href="#">밀키트</a></li>
+                                <li><a href="#">샐러드</a></li>
+                                <li><a href="#">비건제품</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="m_t"><a href="#">CUMMUNITY</a>
+                        <div class="sub">
+                            <ul>
+                                <li><a href="#">고객의 소리</a></li>
+                                <li><a href="#">브랜드 스토리</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="m_t"><a href="#">NEWS</a>
+                        <div class="sub">
+                            <ul>
+                                <li><a href="#">보도자료</a></li>
+                                <li><a href="#">공지사항</a></li>
+                            </ul>
+                        </div>
+                    </li>
                 </ul>
-            </div><!--END GNB-->
+            </div><!--END menu-->
             <div id="util">
                     <ul>
                         <li><a href="#">KR<i class="xi-caret-down-min"></i></a><!--[추가] 닫는 a태그 수정-->
                             <div class="sub"><a href="#">EN</a></div>
+                            <div class="sub"><a href="#">JP</a></div>
                         </li>
                         <li class="buger"><a href="#"><i class="xi-bars"></i></a></li>
                     </ul>
@@ -71,27 +96,20 @@
                 </ul>
             </div><!--end slogan-->
             <div id="s_t">
-
+                
             </div><!--end s_t-->
         </section><!--end main_view-->
-
-        <section id="gotoTop">
-            <p class="top_btn"><a href="#news">↑<br/>
-                TOP</a>
-            </p>
-        </section>
-
         <div id="brand_story">
             <div class="bg_line_box">
-                <svg class="bg_line hidden-xs"  viewBox="0 0 2000 4500" fill="none" xmlns="http://www.w3.org/2000/svg"
+                <svg class="bg_line hidden-xs" width="2000" height="4000" viewBox="0 0 2000 4000" fill="none" xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio='xMidYMin meet'>
-                <path class="st0" d="M1623.03,3852.25c86.1-55.54,170.39-129.28,229.73-213.33c46.71-66.13,93.88-172.03,67.79-254.88
-                c-25-79.4-108.61-125.72-178.81-158.16c-167.71-77.46-344.87-132.56-524.3-175.44c-148.23-35.4-356.32-37.72-462.2-163.71
-                c-70.5-83.87-70.14-296.38,80.07-284.11c119.13,9.72,150.74,306.33-240.7,323.36s-267.44-389,80.24-549.46
-                c347.67-160.46,1018.69-230.98,1135.4-432.77c62.9-108.76,56.8-232.54-9.88-336.18c-88.49-137.55-220.57-242.45-352.84-335.52
-                c-145.05-102.06-307.87-174.13-474.63-232.96c-133.31-47.03-303.57-74.54-410.48-172.91c-99.63-91.69-148.77-216.75-142.85-352.02
-                C434.14,181.06,47.57,110.56,47.57,110.56"
-                    stroke="#7DB996" stroke-width="60" stroke-linecap="round"/>       
+               <path class="st0" d="M1623.03,3852.25c86.1-55.54,170.39-129.28,229.73-213.33c46.71-66.13,93.88-172.03,67.79-254.88
+                    c-25-79.4-108.61-125.72-178.81-158.16c-167.71-77.46-344.87-132.56-524.3-175.44c-148.23-35.4-356.32-37.72-462.2-163.71
+                    c-70.5-83.87-70.14-296.38,80.07-284.11c119.13,9.72,150.74,306.33-240.7,323.36s-267.44-389,80.24-549.46
+                    c347.67-160.46,1018.69-230.98,1135.4-432.77c62.9-108.76,56.8-232.54-9.88-336.18c-88.49-137.55-220.57-242.45-352.84-335.52
+                    c-145.05-102.06-307.87-174.13-474.63-232.96c-133.31-47.03-303.57-74.54-410.48-172.91c-99.63-91.69-148.77-216.75-142.85-352.02
+                    C434.14,181.06,47.57,110.56,47.57,110.56"
+                        stroke="#7DB996" stroke-width="60" stroke-linecap="round"/>    
 
                 </svg>
             </div>
@@ -100,47 +118,60 @@
                 <h3>Brand Story</h3>
                 <ol id="b_start">
                     <li>
-                        <section id="brand_story_01" class="item clearfix">
+                        <section class="item clearfix">
                             <p class="img"><img src="image/bs_img01.png" alt="우리의 시작 이미지"></p>
                             <div class="text">
                             <p class="bt">우리의 시작</p>
-                            <h2>자연과 인간, 동물이 함께 조화롭게 <span>살아가는 세상</span></h2>
-                            <p>Vegan Eat은 바쁜 일상 속에서 건강하고 윤리적인 식사를 추구하는
+                            <h2>자연과 인간, 동물이 함께 조화롭게 살아가는 세상</h2>
+                            <p>Vegan Eat은 바쁜 일상 속에서 건강하고 윤리적인 식사를 추구하는<br/>
                                 모든 이들에게 영감을 주기 위해 시작되었습니다.</p>
+                            <span>Vegan Eat은 바쁜 일상 속에서 건강하고 <br/>
+                                윤리적인 식사를 추구하는<br/>
+                                모든 이들에게 영감을 주기 위해 시작되었습니다.</span>
                             </div>
                         </section>
                     </li>
                     <li>
-                        <section id="brand_story_02" class="item clearfix">
+                        <section class="item clearfix">
                             <p class="img"><img src="image/bs_img02.png" alt="우리의 철학 이미지"></p>
                             <div class="text">
                             <p class="bt">우리의 철학</p>
                             <h2>식물성 재료의 무한한 가능성</h2>
-                            <p>우리가 선택하는 식사가 지구에 미치는 영향을 생각하며
+                            <p>우리가 선택하는 식사가 지구에 미치는 영향을 생각하며<br/>
                                 지속 가능한 방식으로 재배된 원료만을 사용합니다.</p>
+                            <span>우리가 선택하는 식사가 지구에 미치는 영향을 생각하며<br/>
+                                지속 가능한 방식으로 재배된 원료만을 사용합니다.</span>
                             </div>
                         </section>
                     </li>
                     <li>
-                        <section id="brand_story_03" class="item clearfix">
+                        <section class="item clearfix">
                             <p class="img"><img src="image/bs_img03.png" alt="우리의 미래 이미지"></p>
                             <div class="text">
                             <p class="bt">우리의 미래</p>
                             <h2>함께하는 비건 라이프스타일</h2>
-                            <p>우리의 식탁에 건강과 행복을 더하고, 같은 가치를 공유하는 사람들과의
-                                커뮤니티를 통해 비건 라이프스타일을 함께 실천합니다</p>
+                            <p>우리의 식탁에 건강과 행복을 더하고, 같은 가치를 공유하는 사람들과의<br/>
+                                커뮤니티를 통해 비건 라이프스타일을 함께 실천합니다.</p>
+                            <span>우리의 식탁에 건강과 행복을 더하고,<br/>
+                                같은 가치를 공유하는 사람들과의<br/>
+                                커뮤니티를 통해 비건 라이프스타일을 함께 실천합니다.</span>
                             </div>
                         </section>
                     </li>
                     <li>
-                        <section id="brand_story_04" class="item clearfix">
+                        <section class="item clearfix">
                             <p class="img"><img src="image/bs_img04.png" alt="우리의 제품 이미지"></p>
                             <div class="text">
                             <p class="bt">우리의 제품</p>
                             <h2>비건의 맛, 새로운 즐거움</h2>
-                            <p>풍미 가득한 밀키트는 고기 대체 식품의 새로운 기준을 제시합니다.
-                                매 끼니를 즐겁게 만들고,
+                            <p>풍미 가득한 밀키트는 고기 대체 식품의 새로운 기준을 제시합니다.<br/>
+                                매 끼니를 즐겁게 만들고,<br/>
                                 건강한 식습관을 제안하는 것이 우리의 목표입니다.</p>
+                            <span>풍미 가득한 밀키트는<br/>
+                                고기 대체 식품의 새로운 기준을 제시합니다.<br/>
+                                매 끼니를 즐겁게 만들고,<br/>
+                                건강한 식습관을 제안하는 것이 우리의 목표입니다.
+                            </span>
                             </div>
                         </section>
                     </li>
@@ -267,7 +298,6 @@
             <div class="swiper-button-next"></div>
 
         </section><!--end:product-->
-
             <section id="news">
                 <div class="inner">
                     <div class="news_title clearfix">
@@ -277,54 +307,65 @@
                             <p class="xi-angle-right"></p></a>
                         </div><!--end:news_btn-->
                     </div><!--end:news_title-->
-                    <div class="news_box">
+                    <div class="news_box clearfix">
                         <ul>
-                            <li class="hyoree_box"><a href="#">
-                                <img src="image/news_img01.png" alt="">
-                                <span>홍보컨텐츠</span>
-                                <dl>
-                                    <dt>'두부텐더 출시' 이효리는 비건잇 합니다.</dt>
-                                    <dd>새로운 비건식품 두부텐더가 비건잇에서 출시 되었다.<br/>
-                                        비건식품이 트렌드가 되고 있는 요즘시장....</dd>
-                                </dl>
-                            </a></li>                           
-                            <li class="second_box"><a href="#">
-                                <img src="image/news_img02.png" alt="">
-                                <span>보도자료</span>                
-                                <dl>
-                                    <dt>비건잇 '르 꼬로동 블루'와 손잡고 대안식 출시</dt>
-                                    <dd>100% 식물성 원료로 만든 프렌치 다이닝 메뉴 2종 개발</dd>
-                                </dl>
-                            </a></li>                           
-                            <li class="notice"><a href="3">
-                                <img src="image/news_img04.png" alt="">
-                                <span>공지사항</span>
-                            </a></li>                           
-                            <li class="ok_box"><a href="#">
-                                <span>보도자료</span>
-                                <img src="image/news_img03.png" alt="">                                                    
-                                <dl>
-                                    <dt>비건잇 '환경의 날' 맞아 녹색소비 독려</dt>
-                                    <dd>환경 보호에 보탬에 될 수 있는 고객 참여형 esg캠페인 전개</dd>
-                                </dl>
-                            </a></li>                          
-                            <li class="last_box"><a href="#">
+                            <div>
+                                <li class="hyoree_box"><a href="#">
+                                        <img src="image/news_img01.png" alt="">
+                                        <span>홍보컨텐츠</span>
+                                        <dl>
+                                            <dt>'두부텐더 출시' 이효리는 비건잇 합니다.</dt>
+                                            <dd>새로운 비건식품 두부텐더가 비건잇에서 출시 되었다.<br/>
+                                                비건식품이 트렌드가 되고 있는 요즘시장....</dd>
+                                        </dl>
+                                </a></li>
+                            </div>
+                            <div class="hidden">
+                                <li class="second_box"><a href="#">
+                                    <img src="image/news_img02.png" alt="">
+                                    <span>보도자료</span>                
+                                    <dl>
+                                        <dt>비건잇 '르 꼬로동 블루'와 손잡고 대안식 출시</dt>
+                                        <dd>100% 식물성 원료로 만든 프렌치 다이닝 메뉴 2종 개발</dd>
+                                    </dl>
+                                </a></li>
+                            </div>
+                            <div class="hidden">
+                               <li class="notice"><a href="3">
+                                    <img src="image/news_img04.png" alt="">
+                                    <span>공지사항</span>
+                                </a></li>
+                            </div>
+                            <div class="hidden">
+                                <li class="ok_box"><a href="#">
+                                    <span>보도자료</span>
+                                    <img src="image/news_img03.png" alt="">
+                                                    
+                                    <dl>
+                                        <dt>비건잇 '환경의 날' 맞아 녹색소비 독려</dt>
+                                        <dd>환경 보호에 보탬에 될 수 있는 고객 참여형 esg캠페인 전개</dd>
+                                    </dl>
+                                </a></li>
+                            </div>
+                            <div class="hidden">
+                              <li class="last_box"><a href="#">
                                 <span>보도자료</span>
                                 <img src="image/news_img05.png" alt="">               
-                                <dl>
-                                    <dt>비건잇 식물성 대체식품 선보인다.</dt>
-                                    <dd>비건잇,2년 준비 끝에 식물성 참치 출시</dd>
-                                </dl>
-                            </a></li>                       
+                                    <dl>
+                                        <dt>비건잇 식물성 대체식품 선보인다.</dt>
+                                        <dd>비건잇,2년 준비 끝에 식물성 참치 출시</dd>
+                                    </dl>
+                               </a></li>
+                            </div>
                         </ul>
                     </div><!--news_box-->
                 </div><!--end:inner-->
             </section>
-
-
-           
-
-
+            <section class="top">
+                <p class="top_btn"><a href="#news">↑<br/>
+                    TOP</a>
+                </p>
+            </section>
             <section id="mobile">
                 <div class="img"></div><!--end:img-->
                 <div class="inner clearfix">
@@ -341,10 +382,6 @@
                 </div><!--end:inner-->
             </section><!--end:mobile-->
     </main>
-
-    
-
-
     <footer>
         <div class="inner">
             <h1><a href="#"><img src="image/footer_logo.png" alt=""></a></h1>

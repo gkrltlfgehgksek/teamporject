@@ -90,109 +90,112 @@ a{text-decoration:none;}
 
 
 
-#news{width:100%;  margin:200px 0 20%; //outline:3px solid red;
-    .inner{max-width:1364px; margin:0 auto; width:92%; }
-    .news_title{margin-bottom:20px;
-        h1{font-size:100px; font-family:"Pretendard-Bold";  color:#008239;}    
-    } //end:.news_title
-    .news_btn{
-        float:right; margin-top:-40px;  font-family:"Pretendard-Bold";
-        span{font-size:30px; color:#000;}        
-        p{font-size:20px; width:40px; height:40px; background:#008239;
-            border-radius:50%; color:#fff; text-align:center; line-height:40px;
-            margin-left:10px; box-sizing:border-box; }
-    } //end:.news_btn
-    .news_box{//outline:2px solid palevioletred;
-        font-family:"Noto Sans KR"; font-weight:500;
-        ul{
-            display:grid; grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 0.9fr 0.9fr ; grid-gap: 20px;
-            gap: 20px;
-        }         
-        li{ float:left;  position: relative; border-radius:20px;     
-            border-radius:20px;
-            overflow:hidden;    
-            img{width:100%; height:100%; object-fit:cover;
-                transition: all 0.2s ease-in-out;}            
+#news{width:100%; height:800px; margin-bottom:20%;// outline:3px solid red;
+        margin-top:200px;
+    .inner{//outline:2px solid darkcyan;
+        width:1364px; margin:0 auto; 
+        .news_title{margin-bottom:20px;}
+    h1{font-size:100px; font-weight:600; font-family:"Pretendard";
+    color:#008239; float:left;}
+    .news_btn{font-weight:600;
+        float:right; margin-top:50px; font-family:"Pretendard";
+        span{font-size:30px; color:#000;}
+        
+        p{font-size:20px; width:45px; height:45px; background:#008239;
+            border-radius:50%; color:#fff; text-align:center; line-height:45px;
+            margin-left:10px; box-sizing:border-box;
         }
-        li:first-child{grid-row: 1 / span 2;}
+    }
+
+    .news_box{//outline:2px solid palevioletred;
+
+        
+        li{ float:left;  position: relative; border-radius:20px;          
+            img{border-radius:20px; transition: all 0.2s ease-in-out;}
+            
+        }
         li:hover img{transform:scale(1.05);}
-        li a{display:block; width:100%; height:100%;}
-        li a:after{content:""; width:100%; height:268px;
-            position:absolute; bottom:0; left:0; opacity:0.9;
+
+        li:after{cursor: pointer;
+            content:""; width:100%; height:268px;
+            position:absolute; bottom:0; left:0; border-radius:0 0 20px 20px;
+            opacity:0.9;
             background:linear-gradient(
                 rgba(255, 255, 255, 0) 0%,
                 rgba(0, 0, 0, 1) 92%,
                 rgba(2, 0, 36, 1) 90%
-            );}
+            );
+        }
         
         //공지사항만 그라없애기
-        .notice a::after{display:none;}
-        .notice img{object-position:right bottom;}    
+        .notice::after{display:none;}
+
         //홍보자료, 보도자료 등
         span{position:absolute; top:3%; left:5%; color:#fff; z-index:8;
         width:124px; height:47px; background:rgba(0, 0, 0, 0.5); border-radius:50px;
-        font-size:18px; text-align:center; line-height:47px; box-sizing:border-box; }
+        font-size:18px; text-align:center; line-height:47px; box-sizing:border-box;
+        font-family:"Noto Sans KR"; font-weight:500;}
+
 
         //기사제목, 내용
         dl{
-            position:absolute; z-index:90; bottom:6%; left:5%;
-            width:90%;
+            position:absolute; z-index:90;
+            bottom:6%; left:5%;
             dt{color:#fff; font-size:20px; font-weight:bold;
+                font-family:"Noto Sans KR"; width:340px;
                 white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
-            dd{color:#979797; font-size:15px; 
-                margin-top:3%; line-height:1.3; 
+            dd{color:#979797; font-size:15px; font-family:"Noto Sans KR";
+                margin-top:3%; line-height:1.3; font-weight:500;
+                width:350px;
                 white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
             }
         }
 
         //효리박스
-        .hyoree_box{
+        .hyoree_box{margin-right:16px; position: relative;
+        overflow:hidden;  height:720px;
+            img{transition: all 0.2s ease-in-out;}
+
             span{width:150px;}
+
             dt{font-size:25px; width:100%;}
             dd{font-size:17px; width:100%;}
         }
+        /*.hyoree_box::after{content:""; width:100%; height:268px;
+            position:absolute; bottom:0; left:0; border-radius:0 0 20px 20px;
+            opacity:0.9;
+            background:linear-gradient(
+                rgba(255, 255, 255, 0) 0%,
+                rgba(0, 0, 0, 1) 92%,
+                rgba(2, 0, 36, 1) 90%
+            );
+        }*/
+        .hyoree_box:hover img{transform:scale(1.05);}
+
+
+        //효리박스 제외
+        .second_box, .notice, .last_box, .ok_box{
+            overflow:hidden; 
+        }
+        
+
+
+        //2번째, 공지사항 박스
+        .second_box,
+        .notice{margin-bottom:20px;}
+
+        //공지사항, 마지막 박스
+        .notice,
+        .last_box{margin-left:16px;}
+        
        
-    }//end:news_box    
+    }//end:news_box
+
+
+    
+    }//end:inner
 }//end:news
 
-@media (max-width:1400px){
-    #news{
-        .news_title h1{font-size:7vw;}
-    }
-}//end @media (max-width:1024px)
-
-@media (max-width:980px){
-    #news{
-        .news_box{
-            ul{
-                display:grid; grid-template-columns: 1fr 1fr;
-                grid-template-rows: 0.9fr 0.9fr 0.9fr;
-            }
-        }         
-    }
-}//end @media (max-width:980px)
-
-@media (max-width:500px){
-    #news{
-        .inner{width:82%;}
-        .news_title h1{font-size:12vw;}
-        .news_btn{
-            span{display:none;}            
-        }
-        .news_box{
-            ul{
-                display:grid; grid-template-columns: 1fr;
-                grid-template-rows: 0.9fr 0.9fr 0.9fr  0.9fr  0.9fr; grid-gap: 40px;
-                gap: 40px;
-            }
-            .notice{order:5;}
-            span{width:100px; height:30px; line-height:29px;
-                font-size:16px;}
-            .hyoree_box span{width:120px;}
-        }         
-    }
-}//end @media (max-width:500px)
 
 
 
@@ -201,18 +204,18 @@ a{text-decoration:none;}
 
 
 
-#gotoTop{position:fixed; right:50px; bottom:0px; 
+
+.top{position:fixed; right:5%; bottom:20%; 
     z-index:999; background:white; width:60px; height:60px; border-radius:50%;
     box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.1); line-height:60px;
-    opacity:0;
     transition: all .2s ease-in-out;
-    &.active{opacity:1; bottom:50px;}
+
     .top_btn{text-align:center; font-size:1em; line-height:1.5;
     margin-top:5px;
     
     a{text-decoration:none; color:black;}
     }
-}//end:gotoTop
+}//end:top
 
 
 

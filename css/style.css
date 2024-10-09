@@ -185,26 +185,37 @@ main {
 
 #brand_story {
   position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 #brand_story .inner {
   max-width: 1640px;
   width: 85.4%;
   margin: 0 auto;
-  padding-top: 10%;
-  padding-bottom: 5%;
+  padding-top: 8%;
+  padding-bottom: 16%;
+  word-break: keep-all;
+}
+#brand_story span {
+  display: inline-block;
 }
 #brand_story .bg_line_box {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: -1;
-  overflow: hidden;
+  left: 0;
+  top: 0;
 }
 #brand_story .bg_line_box .bg_line {
-  width: 100%;
+  max-width: 1900px;
+  width: 110%;
   position: absolute;
-  aspect-ratio: 2/4;
-  left: -5%;
+  left: 50%;
+  top: 100px;
+  transform: translateX(-50%);
+  margin-left: -50px;
 }
 #brand_story .brand_bg {
   width: 714px;
@@ -216,7 +227,7 @@ main {
 }
 #brand_story h3 {
   font-size: 5.2vw;
-  font-family: Pretendard-Bold;
+  font-family: "Pretendard-Bold";
   color: #008239;
   margin-left: 8.3%;
   margin-bottom: 13%;
@@ -225,7 +236,10 @@ main {
   margin: 0 8.3%;
 }
 #brand_story #b_start li {
-  margin-bottom: 150px;
+  margin-bottom: 12.5%;
+}
+#brand_story #b_start li:last-child {
+  margin-bottom: 0 !important;
 }
 #brand_story #b_start li:nth-child(odd) .img {
   float: left;
@@ -238,6 +252,16 @@ main {
 }
 #brand_story #b_start li:nth-child(even) .text {
   padding-right: 42%;
+}
+#brand_story #b_start .item {
+  position: relative;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+#brand_story #b_start .item.active {
+  transform: translateY(0);
+  opacity: 1;
 }
 #brand_story #b_start .item .img {
   width: 41.9%;
@@ -262,10 +286,112 @@ main {
 #brand_story #b_start .item h2 {
   font-size: 38px;
   font-family: Pretendard-Bold;
-  margin: 27px 0 47px;
+  margin: 4% 0 6%;
+  line-height: 1.4;
 }
 #brand_story #b_start .item p {
   font-size: 25px;
   font-weight: 300;
-  line-height: 40px;
+  line-height: 1.6;
 }
+
+@media (max-width: 1400px) {
+  #brand_story .inner {
+    padding-bottom: 12%;
+  }
+  #brand_story #b_start li:nth-child(odd) .text {
+    padding-left: 44%;
+  }
+  #brand_story #b_start li:nth-child(even) .text {
+    padding-right: 44%;
+  }
+  #brand_story #b_start .item .img {
+    width: 43%;
+  }
+  #brand_story #b_start .item .text {
+    padding-top: 10%;
+  }
+  #brand_story #b_start .item p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  #brand_story .inner {
+    width: 100%;
+    padding-bottom: 12%;
+  }
+  #brand_story .bg_line_box .bg_line {
+    top: 180px;
+  }
+  #brand_story .brand_bg {
+    right: 0;
+  }
+  #brand_story h3 {
+    margin-bottom: 6%;
+  }
+  #brand_story #b_start li:nth-child(odd) .text {
+    padding-left: 50%;
+  }
+  #brand_story #b_start li:nth-child(even) .text {
+    padding-right: 50%;
+  }
+  #brand_story #b_start .item .img {
+    width: 48%;
+  }
+  #brand_story #b_start .item .text {
+    padding-top: 10%;
+  }
+  #brand_story #b_start .item .bt {
+    width: 120px;
+    height: 30px;
+    line-height: 29px;
+    font-size: 16px;
+  }
+  #brand_story #b_start .item h2 {
+    font-size: 28px;
+  }
+  #brand_story #b_start .item p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  #brand_story .inner {
+    padding-bottom: 12%;
+  }
+  #brand_story .bg_line_box .bg_line {
+    display: none;
+  }
+  #brand_story h3 {
+    margin-bottom: 10%;
+    font-size: 11vw;
+  }
+  #brand_story #b_start li {
+    margin-bottom: 28%;
+    border: 2px solid #008239;
+    padding-bottom: 20px;
+  }
+  #brand_story #b_start .item .img {
+    width: 100%;
+    float: none !important;
+    transform: translateX(5%);
+    padding: 0;
+  }
+  #brand_story #b_start .item .text {
+    padding: 0 !important;
+    clear: both;
+  }
+  #brand_story #b_start .item .bt {
+    position: absolute;
+    top: -15px;
+    left: -2px;
+  }
+  #brand_story #b_start .item h2 {
+    font-size: 28px;
+    margin: 4% 0 3%;
+    padding: 0 20px;
+  }
+  #brand_story #b_start .item p {
+    font-size: 16px;
+    padding: 0 20px;
+  }
+}/*# sourceMappingURL=style.css.map */

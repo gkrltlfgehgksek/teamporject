@@ -64,8 +64,8 @@ main{padding-top:110px;}
     #slogan{
         position:absolute; bottom:50px; right:140px;
         li{border:1px solid $main; background:#fff; width: 150px; height:45px; border-radius:25px;
-           text-align: center; line-height: 43px; display: inline-block;
-          margin-left:-20px; position: relative; top:0;}   
+            text-align: center; line-height: 43px; display: inline-block;
+            margin-left:-20px; position: relative; top:0;}   
         li:last-child {background: $main;}
         li:last-child a{color:#fff;}
         .s1{transform:rotate(-10deg); animation: s1 0.4s infinite 0.2s alternate; }
@@ -76,25 +76,28 @@ main{padding-top:110px;}
     }
 }//end main_view
 
-#brand_story{ position: relative;        
-    .inner{max-width:1640px; width: 85.4%; margin: 0 auto; padding-top:10%; padding-bottom:5%;}
+#brand_story{ position: relative;     
+    max-width:1920px; margin:0 auto; overflow:hidden; 
+    .inner{max-width:1640px; width: 85.4%; margin: 0 auto; 
+        padding-top:8%; padding-bottom:16%; word-break:keep-all;}
+    span{display:inline-block;}    
     .bg_line_box{
-        position:absolute; width:100%; height:100%; z-index:-1; overflow:hidden; 
-        .bg_line{width:100%; position:absolute; aspect-ratio: 2 / 4;
-            left:-5%;}
-        .bg_line path{   }
+        position:absolute; width:100%; height:100%; z-index:-1; 
+        left:0; top:0; 
+        .bg_line{max-width:1900px; width:110%; position:absolute; left:50%; top:100px;
+            transform:translateX(-50%); margin-left:-50px;}
     }
     .brand_bg{
         width:714px; height:649px;
         position:absolute; top:0px; right:100px;
         background:url('../image/bs_backimg.png') no-repeat;
     }
-    h3{font-size: 5.2vw; font-family:Pretendard-Bold; color: $main; margin-left:8.3%;
-         margin-bottom: 13%;
-       }
+    h3{font-size: 5.2vw; font-family:"Pretendard-Bold"; color: $main; margin-left:8.3%;
+         margin-bottom: 13%;}
     #b_start{
         margin:0 8.3%;
-        li{margin-bottom:150px;}
+        li{margin-bottom:12.5%;}
+        li:last-child{margin-bottom:0 !important;}
         li:nth-child(odd){
             .img {float: left;}
             .text{ padding-left: 42%;}
@@ -104,18 +107,74 @@ main{padding-top:110px;}
             .text{ padding-right: 42%;}
         }
         .item{
+            position:relative; transform:translateY(100px);
+            opacity:0; transition:all .4s ease-in-out;
+            &.active{ transform:translateY(0); opacity:1;}
             .img{width: 41.9%;}
             .img img{width:100%;}
             .text{padding-top:13.5%;}
             .bt{background: #008239; border-radius:20px; width:160px; height:40px;
                 text-align: center; line-height:39px; 
                 font-size:25px; font-family:Pretendard-Bold; color:#fff;}
-            h2{font-size:38px; font-family:Pretendard-Bold; margin: 27px 0 47px;}
-            p{font-size:25px; font-weight: 300; line-height:40px;}
-        }//end text
+            h2{font-size:38px; font-family:Pretendard-Bold; margin: 4% 0 6%;   
+                line-height:1.4;}
+            p{font-size:25px; font-weight: 300; line-height:1.6;}
+        }//end .item
     }//end b_text
 }//end brand_story
 
+@media (max-width:1400px){
+    #brand_story{
+        .inner{padding-bottom:12%;}
+        #b_start{ 
+            li:nth-child(odd) .text{ padding-left: 44%;}
+            li:nth-child(even) .text{ padding-right: 44%;}           
+            .item{
+                .img{width: 43%;}
+                .text{padding-top:10%;}
+                p{font-size:20px;}
+            }//end .item
+        }
+    }
+}//end @media (max-width:1024px)
 
 
+@media (max-width:1024px){
+    #brand_story{
+        .inner{width:100%; padding-bottom:12%;}
+        .bg_line_box .bg_line{top:180px;}  
+        .brand_bg{right:0;}
+        h3{margin-bottom:6%;}
+        #b_start{            
+            li:nth-child(odd) .text{ padding-left: 50%;}
+            li:nth-child(even) .text{ padding-right: 50%;}
+            .item{
+                .img{width:48%;}
+                .text{padding-top:10%;}
+                .bt{width:120px; height:30px; line-height:29px; font-size:16px;}
+                h2{font-size:28px;}
+                p{font-size:18px;}
+            }//end .item
+        }
+    }
+}//end @media (max-width:1024px)
 
+@media (max-width:768px){
+    #brand_story{
+        .inner{padding-bottom:12%;}
+        .bg_line_box .bg_line{display:none;}  
+        h3{margin-bottom:10%; font-size: 11vw;}
+        #b_start{       
+            li{margin-bottom:28%; border:2px solid #008239;
+                padding-bottom:20px;}    
+            .item{
+                .img{width:100%; float:none !important; 
+                    transform:translateX(5%); padding:0;}
+                .text{padding:0 !important; clear:both;}
+                .bt{position:absolute; top:-15px; left:-2px;}
+                h2{font-size:28px; margin:4% 0 3%; padding:0 20px;}
+                p{font-size:16px; padding:0 20px;}
+            }//end .item
+        }
+    }
+}//end @media (max-width:768px)

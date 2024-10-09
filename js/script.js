@@ -29,22 +29,15 @@ window.addEventListener("load",function(){
     });
 
 
-    var content = document.querySelector('.bg_line_box');
+    var content = document.querySelector('#brand_story');
     var path = document.querySelector('.bg_line path');
     var pathLength = path.getTotalLength();
     path.style.strokeDasharray  = pathLength;
     var absoluteTop = window.scrollY + content.getBoundingClientRect().top;
     var content_h = content.offsetHeight;
-    // path.style.strokeDashoffset = calcDashoffset(window.innerHeight * 0.4, content1, path1Length)
-  
-
-    // function calcDashoffset(scrollY, element, length) {
-    //   const ratio = (scrollY - element.offsetTop) / element.offsetHeight
-    //   const value = length - (length * ratio)
-    //   return value < 0 ? 0 : value > length ? length : value
-    // }
-
+   
     function scrollHandler() {
+
       var point_Y = window.scrollY - absoluteTop + 500;
       var ratio = point_Y / content_h;
       var ratio_re = 0
@@ -53,11 +46,16 @@ window.addEventListener("load",function(){
       else ratio_re = ratio;
       var value = pathLength * ratio_re;
       path.style.strokeDashoffset = -1*(pathLength - value);
-     
+      
     }
 
 
     window.addEventListener('scroll', scrollHandler);
+    window.addEventListener('resize', function(){
+      content_h = content.offsetHeight;
+      absoluteTop = window.scrollY + content.getBoundingClientRect().top;
+      scrollHandler();
+    }); 
 
 
     	
@@ -75,4 +73,77 @@ window.addEventListener("load",function(){
 		fixedBackground: 0
 	});
    
+
+
+    // const tl = gsap.timeline({
+    //     scrollTrigger: {
+    //       scrub: 1,
+    //       //pin: true,
+    //       trigger: "#brand_story_01",
+    //       start: "20% 50%",
+    //       endTrigger: "#brand_story_01",
+    //       end: "100% 50%",
+    //       markers: true, 
+    //     },
+    //   });
+      
+    // tl.to("#brand_story_01 .img", {
+    //     y:-400, duration:0.2
+    // });
+
+    gsap.to("#brand_story_01", {
+        scrollTrigger: {
+          trigger: "#brand_story_01",
+          start: "20% 70%", 
+          endTrigger: "#brand_story",
+          end: "100% 0%",
+          toggleClass: "active",
+          //markers: true, 
+        }
+    });
+    gsap.to("#brand_story_02", {
+        scrollTrigger: {
+          trigger: "#brand_story_02",
+          start: "20% 70%",    
+          endTrigger: "#brand_story",
+          end: "100% 0%",
+          toggleClass: "active",
+         // markers: true, 
+        }
+    });
+    gsap.to("#brand_story_03", {
+        scrollTrigger: {
+          trigger: "#brand_story_03",
+          start: "20% 70%",    
+          endTrigger: "#brand_story",
+          end: "100% 0%",
+          toggleClass: "active",
+          //markers: true, 
+        }
+    });
+    gsap.to("#brand_story_04", {
+        scrollTrigger: {
+          trigger: "#brand_story_04",
+          start: "20% 70%",   
+          endTrigger: "#brand_story",
+          end: "100% 0%",
+          toggleClass: "active",
+          //markers: true, 
+        }
+    });
+
+    gsap.to("#gotoTop", {
+      scrollTrigger: {
+        trigger: "#gotoTop",
+        start: "0% 90%",   
+        endTrigger: "footer",
+        end: "100% 0",
+        toggleClass: "active",
+        //markers: true, 
+      }
+    });
+
+ 
+
+
 });//end:window.addEventListener(...

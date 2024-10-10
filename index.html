@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>veganeat(비건잇)</title>
 
+
     <!--외부 링크연결 -->
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <!--font 스타일 연결-->
@@ -21,6 +22,7 @@
     <script src="js/SmoothScroll.js"></script>
     <!--script 연결-->
     <script src="js/script.js"></script>
+
 </head>
 <body>
     <header>
@@ -30,50 +32,30 @@
             </div><!--end logo-->
             <div id="menu">
                 <ul>
-                    <li class="m_t"><a href="#">ABOUT US</a>
-                        <div class="sub">
-                            <ul>
-                                <li><a href="#">비건잇 소개</a></li>
-                                <li><a href="#">브랜드 스토리</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="m_t"><a href="#">PRODUCT</a>
-                        <div class="sub">
-                            <ul>
-                                <li><a href="#">밀키트</a></li>
-                                <li><a href="#">샐러드</a></li>
-                                <li><a href="#">비건제품</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="m_t"><a href="#">CUMMUNITY</a>
-                        <div class="sub">
-                            <ul>
-                                <li><a href="#">고객의 소리</a></li>
-                                <li><a href="#">브랜드 스토리</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="m_t"><a href="#">NEWS</a>
-                        <div class="sub">
-                            <ul>
-                                <li><a href="#">보도자료</a></li>
-                                <li><a href="#">공지사항</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                    <li><a href="#">ABOUT US</a></li>
+                    <li><a href="#">PRODUCT</a></li>
+                    <li><a href="#">CUMMUNITY</a></li>
+                    <li><a href="#">SUPPORT</a></li>
                 </ul>
-            </div><!--END menu-->
+            </div><!--END GNB-->
             <div id="util">
                     <ul>
                         <li><a href="#">KR<i class="xi-caret-down-min"></i></a><!--[추가] 닫는 a태그 수정-->
                             <div class="sub"><a href="#">EN</a></div>
-                            <div class="sub"><a href="#">f</a></div>
                         </li>
-                        <li class="buger"><a href="#"><i class="xi-bars"></i></a></li>
+                        <li class="buger">
+                           
+                            <a href="#" id="burgerIcon"><i class="xi-bars"></i></a>
+
+
+                            <a href="#" id="closeIcon" style="display:none;">
+                                <i class="xi-close"></i></a>
+                        </li>
                     </ul>
             </div><!--end util-->
+            <div id="fullMenu" class="hidden"> 
+                
+              </div>   
         </div><!--end inner-->
     </header>
     <main>
@@ -83,11 +65,18 @@
             </div><!--end main_text-->
             <div id="main_image" class="swiper">
                 <ul class="swiper-wrapper">
-                    <li class="swiper-slide"><img src="image/main_sj01.png" alt="싱싱샐러드"></li>
-                    <li class="swiper-slide"><img src="image/product_mandu.png" alt="비건만두"></li>
-                    <li class="swiper-slide"><img src="image/product_rice.png" alt="비건볶음밥"></li>
+                    <li class="swiper-slide sal"><img src="image/main_sj01.png" alt="싱싱샐러드"></li>
+                    <li class="swiper-slide ham"><img src="image/main_ham.png" alt="햄버거"></li>
+                    <li class="swiper-slide pas"><img src="image/main_pasta.png" alt="비건볶음밥"></li>
                 </ul>
+
+                <div class="pager"></div>
+                <div class="swiper-button-prev main_prev">←</div>
+                <div class="swiper-button-next main_next">→</div>
+        
+                
             </div><!--end main_image-->
+           
             <div id="slogan">
                 <ul>
                     <li class="s1"><a href="#"># Vegan</a></li>
@@ -122,10 +111,10 @@
                         <section class="item clearfix">
                             <p class="img"><img src="image/bs_img01.png" alt="우리의 시작 이미지"></p>
                             <div class="text">
-                            <p class="bt">우리의 시작</p>
-                            <h2>자연과 인간, 동물이 함께 조화롭게 살아가는 세상</h2>
-                            <p>Vegan Eat은 바쁜 일상 속에서 건강하고 윤리적인 식사를 추구하는<br/>
-                                모든 이들에게 영감을 주기 위해 시작되었습니다.</p>
+                                <p class="bt">우리의 시작</p>
+                                <h2>자연과 인간, 동물이 함께 조화롭게 살아가는 세상</h2>
+                                <p>Vegan Eat은 바쁜 일상 속에서 건강하고 윤리적인 식사를 추구하는<br/>
+                                    모든 이들에게 영감을 주기 위해 시작되었습니다.</p>
                             </div>
                         </section>
                     </li>
@@ -133,10 +122,10 @@
                         <section class="item clearfix">
                             <p class="img"><img src="image/bs_img02.png" alt="우리의 철학 이미지"></p>
                             <div class="text">
-                            <p class="bt">우리의 철학</p>
-                            <h2>식물성 재료의 무한한 가능성</h2>
-                            <p>우리가 선택하는 식사가 지구에 미치는 영향을 생각하며<br/>
-                                지속 가능한 방식으로 재배된 원료만을 사용합니다.</p>
+                                <p class="bt">우리의 철학</p>
+                                <h2>식물성 재료의 무한한 가능성</h2>
+                                <p>우리가 선택하는 식사가 지구에 미치는 영향을 생각하며<br/>
+                                    지속 가능한 방식으로 재배된 원료만을 사용합니다.</p>
                             </div>
                         </section>
                     </li>
@@ -144,10 +133,10 @@
                         <section class="item clearfix">
                             <p class="img"><img src="image/bs_img03.png" alt="우리의 미래 이미지"></p>
                             <div class="text">
-                            <p class="bt">우리의 미래</p>
-                            <h2>함께하는 비건 라이프스타일</h2>
-                            <p>우리의 식탁에 건강과 행복을 더하고, 같은 가치를 공유하는 사람들과의<br/>
-                                커뮤니티를 통해 비건 라이프스타일을 함께 실천합니다</p>
+                                <p class="bt">우리의 미래</p>
+                                <h2>함께하는 비건 라이프스타일</h2>
+                                <p>우리의 식탁에 건강과 행복을 더하고, 같은 가치를 공유하는 사람들과의<br/>
+                                    커뮤니티를 통해 비건 라이프스타일을 함께 실천합니다</p>
                             </div>
                         </section>
                     </li>
@@ -155,12 +144,12 @@
                         <section class="item clearfix">
                             <p class="img"><img src="image/bs_img04.png" alt="우리의 제품 이미지"></p>
                             <div class="text">
-                            <p class="bt">우리의 제품</p>
-                            <h2>비건의 맛, 새로운 즐거움</h2>
-                            <p class="end">풍미 가득한 밀키트는 고기 대체 식품의 새로운 기준을 제시합니다.<br/>
-                                매 끼니를 즐겁게 만들고,<br/>
-                                건강한 식습관을 제안하는 것이 우리의 목표입니다.</p>
-                            </div><!--클래스 end 추가함-->
+                                <p class="bt">우리의 제품</p>
+                                <h2>비건의 맛, 새로운 즐거움</h2>
+                                <p>풍미 가득한 밀키트는 고기 대체 식품의 새로운 기준을 제시합니다.<br/>
+                                    매 끼니를 즐겁게 만들고,<br/>
+                                    건강한 식습관을 제안하는 것이 우리의 목표입니다.</p>
+                            </div>
                         </section>
                     </li>
                 </ol><!--end b_start-->
@@ -168,34 +157,37 @@
         </div><!--end brand story-->
         <section id="product_slider">
             <div class="swiper-wrapper">
+
+
+                <!--상품 1번-->
                 <div class="swiper-slide product01">    
                     <div class="inner">
                         <h1 class="product_title">Product</h1>                              
                         <div class="product_box">
-                            <h3 class="item_title">PASTA</h3>
-                            <div class="main_product">
-                                <p><img src="image/product_pasta.png" alt=""></p>
+                            <h3 class="item_title">MEAlKIT</h3>
+                            <div class="main_product bean">
+                                <p><img src="image/pasta_kit.png" alt=""></p>
                             </div><!--end:main_product-->           
                             <div class="product_bg">
                                 <ul>
-                                    <li class="tomato f"><img src="image/tomato.png" alt=""></li>
-                                    <li class="tomato s"><img src="image/tomato_m.png" alt=""></li>
-                                    <li class="tomato t"><img src="image/tomato_s.png" alt=""></li>
-                                    <li class="pasta"><img src="image/product_pasta_bg.png" alt=""></li>       
+                                    <li class="tomato f"><img src="image/spoon.png" alt=""></li>
+                                    <li class="tomato s"><img src="image/dubu.png" alt=""></li>
+                                    <li class="tomato t"><img src="image/yangpa.png" alt=""></li>
+                                    <li class="pasta"><img src="image/product_bean_bg.png" alt=""></li>       
                                 </ul>
                             </div><!--end:product_bg-->
                         </div><!--end:product_box-->
                         <div class="product_sogae">
-                            <p>건강한 재료<em>로 즐기는</em><br/>
-                            이탈리아의 풍미</p>
+                            <p>간편하게 <em>즐기는</em><br/>
+                            구수한 콩비지찌개</p>
                         </div><!--end:product_sogae-->            
                         <div class="info clearfix">
                             <ul>
-                                <li>주요 성분 : 토마토소스, 올리브유, 마늘, 양파, 통말 파스타
+                                <li>주요 성분 : 콩비지, 두부, 대파, 양파, 고추 등
                                     <a href="#">+</a></li> 
-                                <li>부가 성분 : 바질, 오레가노, 소금
+                                <li>부가 성분 : 멸치(육수용), 다시마(육수용), 마늘 등
                                     <a href="#">+</a></li> 
-                                <li>알레르기 유발 성분 : 글루텐 (통밀 사용)
+                                <li>알레르기 유발 성분 : 콩, 해산물 (멸치 등)
                                     <a href="#">+</a></li> 
                             </ul>
                         </div><!--end:info-->            
@@ -205,19 +197,22 @@
                         </div><!--end:news_btn-->            
                     </div><!--end:inner-->
                 </div><!--end:swiper-slide--> 
+
+
+                <!--상품 2번-->
                 <div class="swiper-slide product02">    
                     <div class="inner">
                         <h1 class="product_title">Product</h1>                              
                         <div class="product_box">
-                            <h3 class="item_title">PASTA</h3>
+                            <h3 class="item_title pink">PASTA</h3>
                             <div class="main_product">
                                 <p><img src="image/product_pasta.png" alt=""></p>
                             </div><!--end:main_product-->           
                             <div class="product_bg">
                                 <ul>
-                                    <li class="tomato f"><img src="image/tomato.png" alt=""></li>
-                                    <li class="tomato s"><img src="image/tomato_m.png" alt=""></li>
-                                    <li class="tomato t"><img src="image/tomato_s.png" alt=""></li>
+                                    <li class="tomato f ss"><img src="image/tomato.png" alt=""></li>
+                                    <li class="tomato s mm"><img src="image/basil.png" alt=""></li>
+                                    <li class="tomato t ee"><img src="image/tomato_s.png" alt=""></li>
                                     <li class="pasta"><img src="image/product_pasta_bg.png" alt=""></li>       
                                 </ul>
                             </div><!--end:product_bg-->
@@ -228,52 +223,54 @@
                         </div><!--end:product_sogae-->            
                         <div class="info clearfix">
                             <ul>
-                                <li>주요 성분 : 토마토소스, 올리브유, 마늘, 양파, 통말 파스타
+                                <li>주요 성분 : 토마토소스, 올리브유, 마늘, 양파, 통밀 파스타 등
                                     <a href="#">+</a></li> 
-                                <li>부가 성분 : 바질, 오레가노, 소금
+                                <li>부가 성분 : 바질, 오레가노, 소금 등
                                     <a href="#">+</a></li> 
-                                <li>알레르기 유발 성분 : 글루텐 (통밀 사용)
+                                <li>알레르기 유발 성분 : 글루텐 (통밀 사용) 등
                                     <a href="#">+</a></li> 
                             </ul>
                         </div><!--end:info-->            
-                        <div class="news_btn">
+                        <div class="news_btn product_pasta_btn">
                             <a href="#"><span>More View</span>
                             <p class="xi-angle-right"></p></a>
                         </div><!--end:news_btn-->            
                     </div><!--end:inner-->
-                </div><!--end:swiper-slide--> 
+                </div><!--end:swiper-slide-->
+                
+                <!--상품 3번-->
                 <div class="swiper-slide product03">    
                     <div class="inner">
                         <h1 class="product_title">Product</h1>                              
                         <div class="product_box">
-                            <h3 class="item_title">PASTA</h3>
-                            <div class="main_product">
-                                <p><img src="image/product_pasta.png" alt=""></p>
+                            <h3 class="item_title yellow">RICE</h3>
+                            <div class="main_product man">
+                                <p><img src="image/product_ricee.png" alt=""></p>
                             </div><!--end:main_product-->           
                             <div class="product_bg">
                                 <ul>
-                                    <li class="tomato f"><img src="image/tomato.png" alt=""></li>
-                                    <li class="tomato s"><img src="image/tomato_m.png" alt=""></li>
-                                    <li class="tomato t"><img src="image/tomato_s.png" alt=""></li>
-                                    <li class="pasta"><img src="image/product_pasta_bg.png" alt=""></li>       
+                                    <li class="tomato f rice_spoon"><img src="image/spoon.png" alt=""></li>
+                                    <li class="tomato s salmon"><img src="image/salmon.png" alt=""></li>
+                                    <li class="tomato t carrot"><img src="image/carrot.png" alt=""></li>
+                                    <li class="pasta"><img src="image/rice.png" alt=""></li>       
                                 </ul>
                             </div><!--end:product_bg-->
                         </div><!--end:product_box-->
                         <div class="product_sogae">
-                            <p>건강한 재료<em>로 즐기는</em><br/>
-                            이탈리아의 풍미</p>
+                            <p>식물성 연어로<em> 즐기는<br/>
+                            특별한</em> 볶음밥</p>
                         </div><!--end:product_sogae-->            
                         <div class="info clearfix">
                             <ul>
-                                <li>주요 성분 : 토마토소스, 올리브유, 마늘, 양파, 통말 파스타
+                                <li>주요 성분 : 토푸(연어 대체), 현미, 당근, 양파, 마늘 등
                                     <a href="#">+</a></li> 
-                                <li>부가 성분 : 바질, 오레가노, 소금
+                                <li>부가 성분 : 간장, 참기름, 소금, 고춧가루 등
                                     <a href="#">+</a></li> 
-                                <li>알레르기 유발 성분 : 글루텐 (통밀 사용)
+                                <li>알레르기 유발 성분 : 대두 (토푸 사용), 글루텐 등
                                     <a href="#">+</a></li> 
                             </ul>
                         </div><!--end:info-->            
-                        <div class="news_btn">
+                        <div class="news_btn product_rice_btn">
                             <a href="#"><span>More View</span>
                             <p class="xi-angle-right"></p></a>
                         </div><!--end:news_btn-->            
@@ -282,8 +279,8 @@
             </div><!--end:swiper-wrapper-->   
             <div class="pager"></div>
 
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+       
+            <div class="swiper-button-next next">→</div>
 
         </section><!--end:product-->
             <section id="news">
@@ -350,7 +347,7 @@
                 </div><!--end:inner-->
             </section>
             <section class="top">
-                <p class="top_btn"><a href="#news">↑<br/>
+                <p class="top_btn"><a href="#main_view">↑<br/>
                     TOP</a>
                 </p>
             </section>

@@ -10,21 +10,11 @@ header{position:fixed; width:100%; z-index:200;background: #fff;
     .inner{display:flex; height:110px; justify-content:space-between; margin:0 7.3%;
         align-items:center; font-size:18px; 
         a{color:#000; font-weight:bold;}        
-        #menu{ /* 여기 비교해서 추가된거 있음*/
-            .m_t{display: inline-block; margin:0 58px; position: relative;}
-            .sub{position: absolute; top:100px;
-                z-index:99;
-                ul{margin-top:20%; white-space:nowrap;}
-                li{margin-top:20%;}
-                display:none; transition:all .3s;
-                
-            }
-            &:hover .sub{display: block;}
-            &::after{content: ''; background: #fff; width:100%; height:0; visibility: hidden;
-                position:absolute; top:110px; left:0; box-shadow:0px 5px 6px rgb(0,0,0,0.2);
-                transition: all .4s;}
-            &:hover::after{height:200px; visibility: visible; }
-
+        #menu{
+            li{
+                display: inline-block; margin:0 58px; 
+            
+            }//end li  
         }//end menu
         #util{font-size: 20px;
             position:relative; width:223px; text-align:right;
@@ -36,12 +26,16 @@ header{position:fixed; width:100%; z-index:200;background: #fff;
                 &:hover .sub{display: block; width: 35px; height:50px; border-radius:0 0 20px 20px;
                      background:#fff;  box-shadow:0px 5px 6px rgb(0,0,0,0.2);
                     line-height:50px; text-align: center;} 
-                }//end li
+            }//end li
+
+
+
             .buger{margin-left: 52px;}
             .buger a{display:block; width:28px; height:28px;
                 background:#000; border-radius:50%; line-height:28px;
-                text-align:center;}
+                text-align:center; }
             .xi-bars{color:#fff;}
+            #closeIcon{color:#fff;}
         }//end util
     }//end inner 
 }//end header
@@ -70,7 +64,41 @@ main{padding-top:110px;}
             &.swiper-slide-prev img{opacity:0; transform:translateX(-90px); transition:all .4s;}
             &.swiper-slide-active img{opacity:1; transform:translateX(0px); transition:all .4s;}
         }
-    }//end main_image
+
+
+       
+
+        .pager{position:absolute; bottom:4%; left:-49%; width:auto; height:auto;
+            z-index:400; font-family:"Pretendard"; color:#000;
+            transform:translate(700px, 50%); font-size:0; font-weight:bold;
+            width:40px; text-align:center; 
+            span{font-size:18px; display:block; padding:5px 0;}
+            .swiper-pagination-current{border-bottom:2px solid #000;}
+            .swiper-pagination-total{color:#000; opacity:0.4; font-weight:normal;}
+    
+            span::before{content:counter(title)""; font-family:"Pretendard";}
+        }
+        
+
+        .main_prev{color:#fff; font-size:40px; position:absolute;
+            left:4%; top:95%; z-index:90;
+        }
+        .main_next{color:#000; font-size:40px; position:absolute;
+            left:4%; top:95.5%; z-index:90;
+        }
+
+        .main_prev::after{display:none;}
+        .main_next::after{display:none;}
+        
+
+
+        
+    }//end:main_image
+    
+
+   
+
+
     #slogan{
         position:absolute; bottom:50px; right:140px;
         li{border:1px solid $main; background:#fff; width: 150px; height:45px; border-radius:25px;
@@ -87,22 +115,24 @@ main{padding-top:110px;}
 }//end main_view
 
 #brand_story{ position: relative;        
-    .inner{max-width:1640px; width: 85.4%; margin: 0 auto;}
+    .inner{max-width:1640px; width: 85.4%; margin: 0 auto; padding-top:10%; padding-bottom:5%;}
     .bg_line_box{
         position:absolute; width:100%; height:100%; z-index:-1; overflow:hidden; 
-        .bg_line{width:87%; position:absolute; aspect-ratio: 2 / 4;
-            left:50%; top:-10%; transform:translateX(-50%);}
+        .bg_line{width:100%; position:absolute; aspect-ratio: 2 / 4;
+            left:-5%;}
         .bg_line path{   }
     }
     .brand_bg{
         width:714px; height:649px;
-        position:absolute; top:-150px; right:100px;
+        position:absolute; top:0px; right:100px;
         background:url('../image/bs_backimg.png') no-repeat;
     }
     h3{font-size: 5.2vw; font-family:Pretendard-Bold; color: $main; margin-left:8.3%;
-        margin-top: 13%; margin-bottom: 13%;
+         margin-bottom: 13%;
        }
-    #b_start{margin:0 8.3%;
+    #b_start{
+        margin:0 8.3%;
+        li{margin-bottom:150px;}
         li:nth-child(odd){
             .img {float: left;}
             .text{ padding-left: 42%;}
@@ -112,7 +142,6 @@ main{padding-top:110px;}
             .text{ padding-right: 42%;}
         }
         .item{
-            
             .img{width: 41.9%;}
             .img img{width:100%;}
             .text{padding-top:13.5%;}
@@ -121,11 +150,100 @@ main{padding-top:110px;}
                 font-size:25px; font-family:Pretendard-Bold; color:#fff;}
             h2{font-size:38px; font-family:Pretendard-Bold; margin: 27px 0 47px;}
             p{font-size:25px; font-weight: 300; line-height:40px;}
-            .end{margin-bottom:360px;}/*여기도 추가한거 있음*/
         }//end text
     }//end b_text
 }//end brand_story
 
+
+
+
+//화면너비가 430px 이하(모바일)
+
+@media (max-width:430px){
+    #main_view{
+        position:relative; height:calc(100vh - 110px);
+        overflow:hidden;
+        #main_text{
+            animation: main_text 100s linear infinite;
+            letter-spacing: -6px; font-weight:bold; font-size:100px; color: $main;
+            white-space: nowrap; //opacity: 0.6;
+            position:absolute; top:20%; line-height:1; margin-top: -0.5em;
+           
+        }//end main_text
+        #main_image{
+            position: absolute; top:50%; left:calc(17.5% - 100px);
+            transform:translateY(-50%); 
+            padding:0 100px; width:calc(70% - 100px); 
+            .swiper-slide{
+                img{height:220px; outline:1px solid green;}
+                &.swiper-slide-next img{opacity:0; transform:translateX(200px); transition:all 0s;}
+                &.swiper-slide-prev img{opacity:0; transform:translateX(-90px); transition:all .4s;}
+                &.swiper-slide-active img{opacity:1; transform:translateX(0px); transition:all .4s;}
+            }
+        }//end main_image
+        #slogan{
+            position:absolute; bottom:80px; right:20px;
+            li{border:1px solid $main; background:#fff; width:80px; height:20px;
+                border-radius:25px;
+               text-align: center; line-height: 20px; display: inline-block;
+              margin-left:-20px; position: relative; top:0;}   
+            li:last-child {background: $main;}
+            li:last-child a{color:#fff;}
+            .s1{transform:rotate(-10deg); animation: s1 0.4s infinite 0.2s alternate; }
+            .s2{transform:rotate(0deg); animation: s1 0.4s infinite 0.3s alternate;}
+            .s3{transform:rotate(10deg); animation: s1 0.4s infinite 0.4s alternate;}
+            .s4{transform:rotate(0deg); animation: s1 0.4s infinite 0.5s alternate;}
+            a{font-size: 12px; text-decoration: none; color:#008239; font-weight:bold;}
+        }
+    }//end main_view
+
+
+
+    #brand_story{ position: relative;        
+        .inner{max-width:1640px; width: 85.4%; margin: 0 auto; padding-top:10%; padding-bottom:5%;}
+        .bg_line_box{
+            position:absolute; width:100%; height:100%; z-index:-1; overflow:hidden; 
+            .bg_line{width:100%; position:absolute; aspect-ratio: 2 / 4;
+                left:-5%;}
+            .bg_line path{   }
+        }
+        .brand_bg{
+            width:714px; height:649px;
+            position:absolute; top:0px; right:100px;
+            background:url('../image/bs_backimg.png') no-repeat;
+        }
+        h3{font-size: 5.2vw; font-family:Pretendard-Bold; color: $main; margin-left:8.3%;
+             margin-bottom: 13%;
+           }
+        #b_start{
+            margin:0 8.3%;
+            li{margin-bottom:150px;}
+            li:nth-child(odd){
+                .img {float:none; width:200px;}
+                .text{ padding-left: 42%;} 
+            }
+            li:nth-child(even){
+                .img {float: right;}
+                .text{ padding-right: 42%;}
+            }
+            .item{
+                .img{width: 41.9%;}
+                .img img{width:100%;}
+                .text{padding-top:13.5%;}
+                .bt{background:none; text-align:left; display:block; border-radius:0;
+                    clear:both;  font-weight:bold; outline:1px solid red; 
+
+
+                    font-size:15px; font-family:Pretendard-Bold; color:#008239;}
+                h2{line-height:25px; 
+                    font-size:18px; font-family:Pretendard-Bold; margin: 27px 0 47px;}
+                p{font-size:15px; font-weight: 300; line-height:25px;
+                    
+                }
+            }//end text
+        }//end b_text
+    }//end brand_story
+}
 
 
 

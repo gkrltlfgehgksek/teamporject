@@ -9,6 +9,19 @@ window.addEventListener("load",function(){
         autoplay: {
             delay: 5000,
         },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+
+          pagination: {
+            el: '.pager',
+            type: "fraction",
+            
+        },
+
+
+
     });
 
     const product_slider = new Swiper('#product_slider', {
@@ -17,6 +30,7 @@ window.addEventListener("load",function(){
         pagination: {
             el: '.pager',
             type: "fraction",
+            
         },
         autoplay: {
             delay: 5000,
@@ -25,6 +39,7 @@ window.addEventListener("load",function(){
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           },
+        
         
     });
 
@@ -75,4 +90,56 @@ window.addEventListener("load",function(){
 		fixedBackground: 0
 	});
    
+
+    
+
+    let search = document.getElementById("burgerIcon");
+    let open_btn = document.getElementsById("burgerIcon");
+    //배열로 만들어짐
+    let close_btn = document.querySelector("#closeIcon");
+
+
+    open_btn[0].addEventListener("click",function(e){
+        e.preventDefault(); //태그의 본래기능을 동작시키지 않음.
+        search.classList.add("show");
+      });
+
+      //닫기버튼
+    close_btn.addEventListener("click",function(){
+    search.classList.remove("show");
+      });
+
+
+
+
+
+
+
+
+
+
+    
 });//end:window.addEventListener(...
+
+
+
+/*
+document.addEventListener('DOMContentLoaded', function() {
+    const burgerIcon = document.getElementById('burgerIcon');
+    const closeIcon = document.getElementById('closeIcon');
+    const fullMenu = document.getElementById('fullMenu');
+  
+    burgerIcon.addEventListener('click', function(e) {
+      e.preventDefault();
+      fullMenu.classList.add('show');  // 메뉴 열기
+      burgerIcon.style.display = 'none';  // 햄버거 아이콘 숨기기
+      closeIcon.style.display = 'inline-block';  // X 아이콘 보이기
+    });
+  
+    closeIcon.addEventListener('click', function(e) {
+      e.preventDefault();
+      fullMenu.classList.remove('show');  // 메뉴 닫기
+      burgerIcon.style.display = 'inline-block';  // 햄버거 아이콘 보이기
+      closeIcon.style.display = 'none';  // X 아이콘 숨기기
+    });
+  });*/

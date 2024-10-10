@@ -28,15 +28,22 @@ window.addEventListener("load",function(){
             el: '.pager',
             type: "fraction",
         },
-        // autoplay: {
-        //     delay: 5000,
-        // },
+        autoplay: {
+            delay: 5000,
+        },
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
           },
         
     });
+
+
+  
+
+
+
+
 
     var content = document.querySelector('#brand_story');
     var path = document.querySelector('.bg_line path');
@@ -152,6 +159,17 @@ window.addEventListener("load",function(){
       }
     });
 
+    gsap.to("#mobile", {
+      scrollTrigger: {
+        trigger: "#mobile",
+        start: "0% 70%",   
+        endTrigger: "#mobile",
+        end: "100% 0",
+        toggleClass: "active",
+        //markers: true, 
+      }
+    });
+
     //사이드메뉴 열기
     var side_btn = document.querySelector(".side_btn");
     var side_area = document.querySelector("#side_menu");
@@ -160,4 +178,28 @@ window.addEventListener("load",function(){
     side_area.classList.toggle("active");
     });
 
+
+    function backToTop() {
+      const position =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      if (position) {
+        window.requestAnimationFrame(() => {
+          window.scrollTo(0, position - position / 10);
+          backToTop();
+        });
+      }
+    }
+    
+
+    var topBtn = document.getElementById("gotoTop");
+    topBtn.addEventListener("click",function(){
+      backToTop();
+    });
+
+
+
 });//end:window.addEventListener(...
+
+
+
+

@@ -1,5 +1,14 @@
 @charset "utf-8";
 
+
+
+
+//10.10 선생님이 수정(모바일o,)
+
+
+
+
+
 $main:#008239;
 a{text-decoration:none;}
 .clearfix::after{content: ''; display: block; clear: both;}
@@ -178,10 +187,10 @@ main{padding-top:110px;}
             .text{padding-top:13.5%;}
             .bt{background: #008239; border-radius:20px; width:160px; height:40px;
                 text-align: center; line-height:39px; 
-                font-size:25px; font-family:Pretendard-Bold; color:#fff;}
-            h2{font-size:38px; font-family:Pretendard-Bold; margin: 4% 0 6%;   
+                font-size:25px; font-family:"Pretendard-Bold"; color:#fff;}
+            h2{font-size:38px; font-family:"Pretendard-Bold"; margin: 4% 0 6%;   
                 line-height:1.4;}
-            p{font-size:25px; font-weight: 300; line-height:1.6;}
+            p{font-size:25px; font-family:"Pretendard-Medium"; line-height:1.6;}
         }//end .item
     }//end b_text
 }//end brand_story
@@ -388,7 +397,7 @@ main{padding-top:110px;}
             background:linear-gradient(
                 rgba(255, 255, 255, 0) 0%,
                 rgba(0, 0, 0, 1) 92%,
-                rgba(2, 0, 36, 1) 90%
+                rgba(0, 0, 0, 1) 90%
             );}
         
         //공지사항만 그라없애기
@@ -458,8 +467,9 @@ main{padding-top:110px;}
          transition:all .4s ease .2s; transform:translateY(100px);
          opacity:0;}
     }
-    .app_box{clear:both; float:right; margin-right:37%; margin-top:3%;}
+    .app_box{clear:both; margin-top:5%; }
     li{display:inline-block;}
+    li:first-child{margin-right:40px;}
 
     &.active{
         .img{bottom:10%; opacity:1;}
@@ -550,6 +560,12 @@ footer{
 }//end @media (max-width:1024px)
 
 
+
+
+
+
+
+
 /*태블릿환경 : 화면의 너비가 1024px이하인 경우*/
 @media (max-width:1024px){
 	header .inner{
@@ -564,8 +580,8 @@ footer{
         }//end util
     }//end header .inner
     #main_view{
-        #main_text{font-size:170px;}
-        #main_image{width:calc(50% - 100px); top:60%;
+        #main_text{font-size:170px; font-family:"Pretendard-Bold";}
+        #main_image{width:calc(50% - 100px); top:40%;
             .swiper-slide{img{height:400px;}}
         #main_slide_bt{width:150px; height:150px; top:-30%;
             .pager{ bottom:-80%;}
@@ -600,18 +616,41 @@ footer{
             }//b_start
         }//end inner
     }//end brand_story
+
+
+
+
+    //프로덕트
     #product_slider{
         .inner{
             .product_title{font-size:35px; padding-bottom:20px;}
         }
-        .product01{background:#21A060;}
-        .product02{background:#FE96A7;}
-        .product03{background:#C2DE8A;}
+        .product01{background:#69B78E;}
+        .product02{background:#F2BEA0;}
+        .product03{background:#ffd483;}
         .product_box{
             .item_title{font-size:15em;}
             .main_product img{width:400px; height:300px; top:35%; left:32%;}
             .main_product::after{width:400px; height:20px; bottom:20%; left:55%;}
+
+            .item_title.yellow{color:#F29021;}
         }//end product_box
+
+
+        .main_product img{width:200px; transform:rotate(15deg);
+            position:absolute; top:29% !important; left:30%; z-index:21;
+            object-fit:contain; 
+        }
+
+        
+        
+        .man.main_product img{width:500px;  top:20% !important; left:27%; height:400px;
+            transform:rotate(-3deg); //outline:1px solid blue;
+            object-fit:contain;
+        }
+
+
+
         .product_bg{
             .f{top:45%; left:8%;
                 img{width: 150px; height: 150px;}
@@ -622,17 +661,40 @@ footer{
             .t{top:28%; right:5%;
                 img{width: 100px; height: 100px;}
             }
-            .pasta{ bottom:28%; left:20%;}
+            .pasta{ bottom:35%; left:18%; width:auto; height:auto;}
             .pasta img{width:190px; height:190px;}
         }//end product_bg
-        .product_sogae{bottom:20%; left:7%;
+        .product_sogae{bottom:14%; left:7%;
             p{font-size:30px;}
         }//end product_sogae
-        .info{
-            li{font-size: 14px; width:100px; height:50px;}
+
+
+        .info{ right:6%; bottom:10%;
+            li{font-size: 14px; width:100%; height:auto; 
+               margin-bottom:2%;
+            }
         }//end info
 
+        .news_btn{        
+            margin-top:40%; font-family:"Pretendard"; text-align: center;
+            span{font-size:25px; color:#FDF9DE;}        
+            p{font-size:12px; width:30px; height:30px; background:#FDF9DE;
+                border-radius:50%; color:#69B78E; text-align:center; line-height:30px;
+                margin-left:10px; box-sizing:border-box; font-weight:bold;}
+            &.product_pasta_btn{
+               p{color:#F2BEA0;}
+            }
+            &.product_rice_btn{
+                p{color:#F2B749;}
+            }
+        }//end:news_btn
+
+
     }//end product_slide
+
+
+
+
 
     #mobile{
         height:350px;
@@ -680,6 +742,12 @@ footer{
     }//end:footer
 }//end:@media(태블릿 1024
 
+
+
+
+
+
+
 @media (max-width:980px){
     #news{
         .news_box{
@@ -690,6 +758,12 @@ footer{
         }         
     }
 }//end @media (max-width:980px)
+
+
+
+
+
+
 
 @media (max-width:768px){
     header{
@@ -726,6 +800,8 @@ footer{
     }//end:mobile    
 }//end @media (max-width:768px)
 
+
+
 @media (max-width:590px){
 
     #mobile{
@@ -755,6 +831,8 @@ footer{
     }
 
 }//end @media (max-width:590px)
+
+
 
 //모바일
 @media (max-width:500px){
@@ -789,12 +867,6 @@ footer{
     }//end:mobile    
 
 
-   
-
-
-
-
-
     //위로가기
     #gotoTop{z-index:50; overflow: hidden; cursor: pointer;
         width:40px; height:40px; line-height:40px; right:20px;
@@ -803,9 +875,6 @@ footer{
     }//end:gotoTop
 
 
-
-
-    
 
     //프로덕트
     #product_slider{
